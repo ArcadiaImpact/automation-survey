@@ -1,0 +1,248 @@
+/*
+ * Arcadia Impact branding for the Jotform survey (form 262794266723063).
+ *
+ * This is the text that sits in Jotform's custom CSS box, after Jotform's own
+ * generated theme. To apply a change: Jotform -> Form Designer -> Styles ->
+ * Inject Custom CSS, replace the contents with this file, save.
+ *
+ * Jotform also needs this line as the VERY FIRST line of its CSS (before its
+ * generated theme), because browsers ignore @import anywhere else:
+ *   @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Cabin:wght@400;500;600;700&display=swap');
+ * The @font-face rules in "fixes 6" load the same fonts without it, so the
+ * form still works if Jotform drops that line.
+ *
+ * The "fixes N" sections were added one after another while matching the
+ * original survey; later sections override earlier ones on purpose.
+ */
+/* ===== Arcadia Impact branding (matches arcadiaimpact.github.io/automation-survey) ===== */
+html.supernova, html.supernova body { background: #FAFAF9 !important; }
+html.supernova body {
+  font-family: 'Cabin', -apple-system, 'Segoe UI', sans-serif !important;
+  color: #24332C !important; font-size: 16.5px; line-height: 1.55;
+}
+html.supernova body::before {
+  content: "Arcadia Impact"; display: block;
+  background: #24332C; color: #FAFAF9;
+  font-family: 'Source Serif 4', Georgia, serif; font-size: 1.15rem; font-weight: 600; letter-spacing: .01em;
+  padding: .85rem 1.4rem;
+}
+.form-all {
+  background: #FAFAF9 !important; box-shadow: none !important; border: 0 !important;
+  max-width: 780px !important; width: 100% !important;
+  font-family: 'Cabin', -apple-system, 'Segoe UI', sans-serif !important; color: #24332C !important;
+}
+.form-all * { font-family: inherit; }
+.form-section { background: transparent !important; box-shadow: none !important; border: 0 !important; }
+
+/* headings */
+.form-header-group { border-bottom: 1px solid #E2E4E1 !important; background: transparent !important; }
+.form-header, .form-html h1, .form-html h2, .form-html h3 {
+  font-family: 'Source Serif 4', Georgia, serif !important; color: #24332C !important;
+  font-weight: 600 !important; letter-spacing: -.01em; line-height: 1.18 !important;
+}
+.header-large .form-header { font-size: 2.1rem !important; }
+.header-default .form-header, .form-html h2 { font-size: 1.45rem !important; }
+.form-subHeader { color: #566059 !important; font-size: 1rem !important; line-height: 1.55 !important; }
+
+/* body text blocks */
+.form-html, .form-html p, .form-html li { color: #24332C !important; font-size: 16.5px !important; line-height: 1.55 !important; }
+.form-html a, .form-all a { color: #24332C !important; text-decoration: underline; text-underline-offset: .15em; }
+.form-html em { color: #566059; }
+
+/* question labels, hints, required mark */
+.form-label { color: #24332C !important; font-weight: 600 !important; font-size: 1rem !important; }
+.form-required { color: #425F48 !important; }
+.form-sub-label, .form-description { color: #566059 !important; font-size: .9rem !important; }
+.form-line { background: transparent !important; }
+.form-line-active, .form-line:focus-within { background: transparent !important; }
+
+/* text inputs */
+.form-textbox, .form-textarea, .form-matrix-values input, .form-dropdown {
+  font-family: 'Cabin', sans-serif !important; color: #24332C !important;
+  background: #FFFFFF !important; border: 1px solid #E2E4E1 !important; border-radius: 8px !important;
+  box-shadow: none !important;
+}
+.form-textarea { min-height: 6.2rem !important; }
+.form-textbox:focus, .form-textarea:focus, .form-matrix-values input:focus {
+  outline: 2px solid #425F48 !important; outline-offset: 2px; border-color: #E2E4E1 !important; box-shadow: none !important;
+}
+
+/* single-choice options as pills */
+.form-single-column { display: flex !important; flex-wrap: wrap; gap: .5rem; }
+.form-single-column > .form-radio-item {
+  display: inline-flex !important; align-items: center; width: auto !important; float: none !important; clear: none !important;
+  margin: 0 !important; padding: .42rem .9rem !important;
+  border: 1px solid #E2E4E1; background: #ECEEEC; border-radius: 999px; font-size: .92rem;
+}
+.form-single-column > .form-radio-item:hover { border-color: #C9CDC9; }
+.form-single-column > .form-radio-item label { color: #24332C !important; margin: 0 !important; }
+.form-single-column > .form-radio-item:has(input:checked) { background: #24332C; border-color: #24332C; }
+.form-single-column > .form-radio-item:has(input:checked) label { color: #FAFAF9 !important; }
+.form-single-column > .form-radio-item:has(input:checked) label::before { border-color: #FAFAF9 !important; }
+.form-single-column > .form-radio-item:has(input:checked) label::after { background-color: #FAFAF9 !important; }
+.form-radio-other-input { border-radius: 8px !important; border: 1px solid #E2E4E1 !important; }
+.form-radio-item .form-radio + label::before { border-color: #566059 !important; }
+.form-radio-item .form-radio:checked + label::after { background-color: #24332C !important; }
+
+/* grids (points + hours) */
+.form-matrix-table {
+  background: #FFFFFF !important; border: 1px solid #E2E4E1 !important; border-radius: 12px !important;
+  border-collapse: separate !important; border-spacing: 0 !important; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(36,51,44,.06);
+}
+.form-matrix-th, .form-matrix-column-headers {
+  background: #ECEEEC !important; color: #24332C !important; font-weight: 600 !important;
+  font-size: .9rem !important; border: 0 !important; border-bottom: 1px solid #E2E4E1 !important;
+}
+.form-matrix-row-headers {
+  background: #FFFFFF !important; color: #24332C !important; font-weight: 500 !important;
+  font-size: .92rem !important; text-align: left !important; border: 0 !important; border-bottom: 1px solid #ECEEEC !important;
+}
+.form-matrix-values { background: #FFFFFF !important; border: 0 !important; border-bottom: 1px solid #ECEEEC !important; }
+.form-matrix-value-tr:last-child th, .form-matrix-value-tr:last-child td { border-bottom: 0 !important; }
+.form-matrix-values input {
+  background: #FAFAF9 !important; border: 1px solid #D8DBD8 !important; border-radius: 6px !important; text-align: center;
+}
+
+/* total box */
+#id_22 .form-textbox {
+  font-family: 'Source Serif 4', Georgia, serif !important; font-size: 1.4rem !important; font-weight: 700 !important;
+  background: #FFFFFF !important; border-radius: 12px !important;
+}
+
+/* buttons */
+.form-pagebreak-next, .form-submit-button, .form-pagebreak-back {
+  font-family: 'Cabin', sans-serif !important; font-weight: 600 !important; font-size: .82rem !important;
+  letter-spacing: .05em !important; text-transform: uppercase !important;
+  border-radius: 10px !important; padding: .68rem 1.3rem !important; min-width: 0 !important; height: auto !important;
+  box-shadow: none !important; transition: opacity .15s;
+}
+.form-pagebreak-next, .form-submit-button {
+  background: #24332C !important; color: #FAFAF9 !important; border: 1px solid #24332C !important;
+}
+.form-pagebreak-next::before, .form-submit-button::before { content: "⇢\00a0\00a0"; }
+.form-pagebreak-next:hover, .form-submit-button:hover { opacity: .88; background: #24332C !important; }
+.form-pagebreak-back {
+  background: #FFFFFF !important; color: #24332C !important; border: 1px solid #C9CDC9 !important;
+}
+.form-pagebreak-back:hover { background: #ECEEEC !important; }
+
+/* errors */
+.form-error-message { background: #8C3B21 !important; border-radius: 6px !important; }
+.form-line-error .form-textbox, .form-line-error .form-textarea { border-color: #8C3B21 !important; }
+.form-line-error { background: transparent !important; }
+
+/* thank-you page */
+.thankyou-wrapper, .form-all .thankyou-text { color: #24332C !important; }
+.thankyou-wrapper h1 { font-family: 'Source Serif 4', Georgia, serif !important; font-weight: 600 !important; }
+
+/* fixes */
+html.supernova body { margin: 0 !important; }
+.form-all .form-single-column > span.form-radio-item.formRadioOther {
+  display: inline-flex !important; width: auto !important; flex: 0 0 auto !important;
+}
+.form-all .form-single-column > span.form-radio-item.formRadioOther:has(input.form-radio-other:checked) {
+  flex: 1 1 100% !important; gap: .6rem;
+}
+.form-all .formRadioOther .form-radio-other-input {
+  background: #FFFFFF !important; color: #24332C !important; max-width: 16rem;
+}
+
+/* fixes 2: table corner labels + cell spacing */
+.form-matrix-th { font-size: 0 !important; text-align: left !important; padding: .6rem .7rem !important; }
+#id_33 .form-matrix-th::after { content: "Task category"; font-size: .9rem; }
+#id_26 .form-matrix-th::after { content: "Task"; font-size: .9rem; }
+.form-matrix-row-headers { padding: .6rem .7rem !important; }
+.form-matrix-values { padding: .4rem .6rem !important; text-align: center !important; }
+.form-matrix-values input { width: 5.4rem !important; max-width: 100% !important; margin: 0 auto !important; display: block; }
+#id_22 .form-textbox { max-width: 9rem !important; text-align: center; }
+
+/* fixes 3: ticks, task descriptions, simpler Other */
+/* tick inside the selected circle */
+.form-radio-item .form-radio:checked + label::before { background: #FFFFFF !important; border-color: #FFFFFF !important; }
+.form-radio-item .form-radio:checked + label::after {
+  content: "\2713" !important; transform: none !important; background: none !important;
+  left: 0 !important; top: 0 !important; width: 20px !important; height: 20px !important;
+  color: #24332C !important; font-size: 13px !important; font-weight: 700 !important;
+  line-height: 20px !important; text-align: center !important; border-radius: 50%;
+}
+/* grids: bold task name, grey description underneath (as in the original) */
+.form-matrix-row-headers { font-weight: 500 !important; line-height: 1.35 !important; }
+.form-matrix-row-headers::after {
+  display: block; font-weight: 400; color: #566059; font-size: .8rem; line-height: 1.3; margin-top: .15rem;
+}
+.form-matrix-value-tr:nth-child(2) .form-matrix-row-headers::after { content: "Reading relevant literature, papers, etc."; }
+.form-matrix-value-tr:nth-child(3) .form-matrix-row-headers::after { content: "Writing experiment plans; designing environments, datasets, and metrics"; }
+.form-matrix-value-tr:nth-child(4) .form-matrix-row-headers::after { content: "Writing code to implement the experiment plan"; }
+.form-matrix-value-tr:nth-child(5) .form-matrix-row-headers::after { content: "Launching and orchestrating training runs; running evals"; }
+.form-matrix-value-tr:nth-child(6) .form-matrix-row-headers::after { content: "Analysing and interpreting results; writing docs for colleagues or external audiences, and papers"; }
+.form-matrix-value-tr:nth-child(7) .form-matrix-row-headers::after { content: "People management, peer collaboration, meetings, mentorship, and project/research management"; }
+
+/* Other: a normal pill; its text box drops onto its own line below when chosen */
+.form-all .form-single-column > span.form-radio-item.formRadioOther {
+  display: contents !important; padding: 0 !important; border: 0 !important; background: none !important;
+}
+.form-all .formRadioOther > label {
+  display: inline-flex !important; align-items: center; position: relative;
+  padding: .42rem .9rem .42rem 2.55rem !important; margin: 0 !important;
+  border: 1px solid #E2E4E1; background: #ECEEEC; border-radius: 999px; font-size: .92rem; color: #24332C !important;
+}
+.form-all .formRadioOther > label:hover { border-color: #C9CDC9; }
+.form-all .formRadioOther > label::before,
+.form-all .formRadioOther > label::after { left: .9rem !important; top: calc(50% - 10px) !important; }
+.form-all .formRadioOther > .form-radio:not(:checked) + label::after { left: calc(.9rem + 3px) !important; top: calc(50% - 7px) !important; }
+.form-all .formRadioOther > .form-radio:checked + label { background: #24332C; border-color: #24332C; color: #FAFAF9 !important; }
+.form-all .formRadioOther > .other-input-container { flex: 0 0 100%; margin-top: .1rem; }
+.form-all .formRadioOther .form-radio-other-input {
+  max-width: 16rem !important; width: 100% !important; background: #FFFFFF !important; color: #24332C !important;
+}
+.form-all .formRadioOther > .form-radio:checked + label::after { left: .9rem !important; top: calc(50% - 10px) !important; }
+
+/* fixes 4 */
+html.supernova .form-all .form-single-column > .formRadioOther > label { display: inline-flex !important; width: auto !important; flex: 0 0 auto !important; }
+html.supernova .form-all .formRadioOther .other-input-container input.form-radio-other-input { width: 16rem !important; min-width: 0 !important; max-width: 100% !important; }
+
+/* fixes 5: tooltip on the 1-year-ago column */
+#id_26 .form-matrix-column_1 { position: relative; cursor: help; }
+#id_26 .form-matrix-column_1 label::after {
+  content: "i"; display: inline-grid; place-items: center; width: 1.15rem; height: 1.15rem; margin-left: .25rem;
+  vertical-align: middle; border: 1px solid #566059; border-radius: 50%; color: #566059;
+  font-size: .72rem; font-weight: 600; line-height: 1; font-family: 'Source Serif 4', Georgia, serif;
+}
+#id_26 .form-matrix-column_1::after {
+  content: "•  Available 1 year ago: Cursor, Claude Code, GPT-5, GPT-5 Codex, Sonnet 4.5, and Haiku 4.5.\A•  Out of scope: Claude Opus 4.5, GPT-5.1, Gemini 3, and Grok 4.1 were released after October 2025."; white-space: pre-line;
+  position: absolute; z-index: 30; top: calc(100% + .4rem); left: 50%; transform: translateX(-50%);
+  width: min(24rem, 75vw); padding: .65rem .75rem; border-radius: 8px;
+  background: #24332C; color: #FAFAF9; font-size: .8rem; font-weight: 400; line-height: 1.4; text-align: left;
+  box-shadow: 0 4px 14px rgba(36,51,44,.2); visibility: hidden; opacity: 0; transition: opacity .15s; pointer-events: none;
+}
+#id_26 .form-matrix-column_1:hover::after { visibility: visible; opacity: 1; }
+
+/* fixes 6: fonts + branding that also work on the thank-you page */
+@font-face { font-family: 'Cabin'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(https://fonts.gstatic.com/s/cabin/v35/u-4i0qWljRw-PfU81xCKCpdpbgZJl6XvqdnsF3-OAw.woff2) format('woff2'); }
+@font-face { font-family: 'Source Serif 4'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(https://fonts.gstatic.com/s/sourceserif4/v15/vEFI2_tTDB4M7-auWDN0ahZJW1gb8te1Xb7G.woff2) format('woff2'); }
+html, body { background: #FAFAF9 !important; }
+body { margin: 0 !important; }
+body::before { content: 'Arcadia Impact'; display: block; background: #24332C; color: #FAFAF9; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.15rem; font-weight: 600; letter-spacing: .01em; padding: .85rem 1.4rem; }
+.ai-check { border-radius: 50% !important; display: block; }
+.ai-thanks h1 { font-family: 'Source Serif 4', Georgia, serif !important; font-weight: 600 !important; }
+.ai-thanks, .ai-thanks p { font-family: 'Cabin', -apple-system, 'Segoe UI', sans-serif !important; }
+
+/* fixes 7: clickable Arcadia Impact banner */
+html.supernova body::before, body::before {
+  position: fixed !important; top: 0; left: 0; right: 0; z-index: 900;
+  height: 56px; line-height: 56px !important; padding: 0 1.4rem !important; box-sizing: border-box;
+}
+html.supernova body, body { padding-top: 56px !important; }
+html body .ai-brandlink, .form-all .form-html a.ai-brandlink, .ai-thanks a.ai-brandlink {
+  position: fixed !important; top: 0; left: 0; z-index: 901;
+  height: 56px; line-height: 56px; padding: 0 1.4rem; box-sizing: border-box;
+  background: #24332C; color: #FAFAF9 !important; text-decoration: none !important;
+  font-family: 'Source Serif 4', Georgia, serif !important; font-size: 1.15rem !important; font-weight: 600; letter-spacing: .01em;
+}
+html body .ai-brandlink:hover, .form-all .form-html a.ai-brandlink:hover { text-decoration: underline !important; text-underline-offset: .2em; }
+.form-line:has(.ai-brandlink) { padding: 0 !important; margin: 0 !important; min-height: 0 !important; height: 0 !important; }
+
+/* fixes 8: keep the bar label left-aligned on every page */
+html.supernova body::before, body::before { text-align: left !important; }
+html body .ai-brandlink, .ai-thanks a.ai-brandlink, a.ai-brandlink { left: 0 !important; right: auto !important; text-align: left !important; }
