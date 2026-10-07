@@ -24,9 +24,24 @@
   <iframe
     id="JotFormIFrame-262794266723063"
     title="Measuring Automation in AI Safety Research"
-    src="https://form.jotform.com/262794266723063"
+    src="https://form.jotform.com/262794266723063?source=pilot"
     allow="geolocation; microphone; camera; fullscreen; payment"
     allowfullscreen></iframe>
+  <script>
+    // Every response records where it came from in the form's hidden "source" field.
+    // During the pilot that defaults to "pilot". AT LAUNCH: set DEFAULT_SOURCE to ""
+    // and remove "?source=pilot" from the iframe src above.
+    // A tag in this page's own link (e.g. ?source=slack) is passed through and wins.
+    var DEFAULT_SOURCE = "pilot";
+    (function () {
+      var params = new URLSearchParams(location.search);
+      if (!params.has("source") && DEFAULT_SOURCE) params.set("source", DEFAULT_SOURCE);
+      var qs = params.toString();
+      var src = "https://form.jotform.com/262794266723063" + (qs ? "?" + qs : "");
+      var frame = document.getElementById("JotFormIFrame-262794266723063");
+      if (frame.src !== src) frame.src = src;
+    })();
+  </script>
   <noscript>
     <div class="fallback">
       <p>If the survey does not load, open it directly:
